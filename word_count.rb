@@ -4,6 +4,9 @@ class Phrase
 	end
 
 	def word_count
-		{"word"=>1}
+		@sentence.split(" ").inject(Hash.new(0)) do |word_count_hash, word|
+			word_count_hash[word] += 1
+			word_count_hash
+		end
 	end
 end
