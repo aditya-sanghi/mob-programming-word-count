@@ -40,7 +40,7 @@ class WordCountTest < Minitest::Test
   end
 
   def test_ignore_punctuation
-    skip
+    # skip
     phrase = Phrase.new("car: carpet as java: javascript!!&@$%^&")
     counts = {"car"=>1, "carpet"=>1, "as"=>1, "java"=>1, "javascript"=>1}
     assert_equal counts, phrase.word_count

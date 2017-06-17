@@ -13,6 +13,8 @@ class Phrase
 	private
 
 	def words
-		@sentence.split(%r{[,\s]+})
+		@sentence
+      .gsub(/[\!\&\@\$\%\^\:\,]/, ' ')
+      .split(/\s+/)
 	end
 end
