@@ -19,21 +19,21 @@ class WordCountTest < Minitest::Test
   end
 
   def test_multiple_occurrences_of_a_word
-    skip
+    # skip
     phrase = Phrase.new("one fish two fish red fish blue fish")
     counts = {"one"=>1, "fish"=>4, "two"=>1, "red"=>1, "blue"=>1}
     assert_equal counts, phrase.word_count
   end
 
   def test_handles_cramped_lists
-    skip
+    # skip
     phrase = Phrase.new("one,two,three")
     counts = {"one"=>1, "two"=>1, "three"=>1}
     assert_equal counts, phrase.word_count
   end
 
   def test_handles_expanded_lists
-    skip
+    # skip
     phrase = Phrase.new("one,\ntwo,\nthree")
     counts = {"one"=>1, "two"=>1, "three"=>1}
     assert_equal counts, phrase.word_count
