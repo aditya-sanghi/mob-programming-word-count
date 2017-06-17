@@ -5,7 +5,8 @@ class Phrase
 
 	def word_count
 		words.inject(Hash.new(0)) do |word_count_hash, word|
-			word_count_hash[word] += 1
+      word.delete!("'") if word.scan(/'/).count == 2
+     	word_count_hash[word] += 1
 			word_count_hash
 		end
 	end
@@ -13,9 +14,10 @@ class Phrase
 	private
 
 	def words
-		@sentence
+		word = @sentence
       .downcase
       .gsub(/[\!\&\@\$\%\^\:\,\.]/, ' ')
       .split(/\s+/)
+      
 	end
 end

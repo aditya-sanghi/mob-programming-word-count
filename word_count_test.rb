@@ -68,7 +68,7 @@ class WordCountTest < Minitest::Test
   end
 
   def test_with_quotations
-    skip
+    #skip
     phrase = Phrase.new("Joe can't tell between 'large' and large.")
     counts = {"joe"=>1, "can't"=>1, "tell"=>1, "between"=>1, "large"=>2, "and"=>1}
     assert_equal counts, phrase.word_count
