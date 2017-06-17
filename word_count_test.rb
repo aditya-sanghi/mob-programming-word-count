@@ -61,7 +61,7 @@ class WordCountTest < Minitest::Test
   end
 
   def test_with_apostrophes
-    skip
+    #skip
     phrase = Phrase.new("First: don't laugh. Then: don't cry.")
     counts = {"first"=>1, "don't"=>2, "laugh"=>1, "then"=>1, "cry"=>1}
     assert_equal counts, phrase.word_count
