@@ -14,6 +14,7 @@ class Phrase
 
 	def words
 		@sentence
+      .downcase
       .gsub(/[\!\&\@\$\%\^\:\,]/, ' ')
       .split(/\s+/)
 	end
